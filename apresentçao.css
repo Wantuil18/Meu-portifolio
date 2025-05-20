@@ -1,0 +1,306 @@
+/*Alterações no site inteiro*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: black;
+    height: 100vh;
+}
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(139, 31, 31);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;   
+    color: rgb(108, 105, 105);
+    transition: .2s;
+
+}
+button:hover{
+    box-shadow: 0px 0px 8px rgb(249, 2, 2);
+    color: white;
+    transform: scale(1.05);
+}
+h2.title{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+}
+h2.title span{
+    color: rgb(255, 6, 6);
+}
+p.autor{    
+    text-align: right;
+}  
+/**/
+header{
+    padding: 40px 4%;
+
+}
+header > .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a{
+    color: rgb(96, 95, 95);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+header a:hover{
+    color: white;
+    transform: scale(1.05);
+}
+header nav ul{  
+    list-style: none;
+}
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+section.topo-do-site{
+    padding: 40px 4%;
+}
+section.topo-do-site .flex{    
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px;
+}
+.topo-do-site h1{
+    font-size: 42px;
+    color: white;
+    line-height: 40px;
+}
+.topo-do-site h1 span{
+    color: rgb(255, 6, 6);
+}    
+.topo-do-site .txt-topo-site p{
+    color: white;
+    margin: 40px 0;
+    font-size: 18px;
+
+}
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+section.caracteristicas{
+    padding: 40px 4%;
+
+}
+section.caracteristicas .flex{
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.caracteristicas .caracteristicas-box{
+    color: white;
+    padding: 40px;    
+    margin-top: 45px;
+    border-radius: 20px;
+    transition: .2s;
+
+}
+.caracteristicas .caracteristicas-box:hover{
+    box-shadow: 0px 0px 20px rgba(249, 2, 2, 0.578);
+    transform: scale(1.05);   
+
+    
+}
+.caracteristicas .caracteristicas-box img{
+    width: 60%;
+    max-width: 900px;
+    margin: 0 auto;    
+}
+.caracteristicas .caracteristicas-box h3{
+    font-size: 25px;
+    margin: 15px 0;
+}
+section.sobre{
+    padding: 80px 4%;
+}
+section.sobre .flex{
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.sobre .txt-sobre{
+    color: white;    
+}
+.sobre .txt-sobre h2{
+    font-size: 38px;
+    margin-bottom: 20px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.sobre .txt-sobre h2 span{
+    color: rgb(255, 6, 6);
+    display: block;
+}
+.sobre .txt-sobre p{   
+    margin: 20px 0;
+    text-align: justify;
+}
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(139, 31, 31);
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: .2s;
+    
+}
+section.portfolio{
+    padding: 80px 4%;   
+}
+section.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+
+}
+.img-port:hover{
+    background-position: 100% 100%;
+    transition: .5s;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.69);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+.overlay:hover{
+    opacity: 1;   
+}
+footer{
+    padding: 60px 4%;
+    
+}
+footer .flex{
+    justify-content: space-between;
+    
+}
+footer .line-footer{
+    padding: 20px 0;   
+}
+.borda{
+    border-top: rgb(249, 2, 2) solid 2px;
+}
+footer .line-footer p i{
+    color: red;
+    font-size: 25px;
+
+}
+footer .line-footer p a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+@media screen and (max-width:900px){
+    .menu-desktop, .btn-contato{
+        display: none;
+    }    
+    .flex{
+        flex-direction: column;
+    }
+    h2.title{
+        font-size: 35px;
+        line-height: 30px;
+    }
+    .topo-do-site h1{
+        font-size: 32px;       
+    }
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+    .topo-do-site .img-topo-site img{
+        width: 100%;        
+    }
+    section.topo-do-site .flex{    
+        gap: 40px;
+    }
+    section.caracteristicas{
+        padding: 40px 8%;
+    
+    }
+    .sobre .txt-sobre h2{
+        font-size: 36px;        
+        line-height: 35px;
+        text-align: center;        
+    }
+    .btn-social{
+        text-align: center;
+    }
+    .img-sobre img{
+        width: 100%;
+        
+    }
+    section.portfolio{
+        padding: 80px 4%;   
+    }
+    .img-port{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+                
+    }
+    section.portfolio .flex{
+        gap: 50px;
+    }
+    footer .flex{
+        flex-direction: column;   
+        gap: 30px;    
+        
+    }
+    footer .line-footer{
+        text-align: center;
+        
+    }
+}
+
+
